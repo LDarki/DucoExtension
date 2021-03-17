@@ -1,0 +1,328 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* General */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+body {
+	width: 250px;
+	height: 300px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: #f5f9fc;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.error {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.img-shadow {
+	-webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.18));
+	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.18));
+}
+
+.shadow {
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Animation */
+
+.update {
+	-webkit-animation-name: expandNotification;
+	animation-name: expandNotification;
+	-webkit-animation-duration: 0.2s;
+	animation-duration: 0.2s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+/* Main */
+
+.container {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.container h1 {
+	margin-top: 10px;
+}
+
+.container img {
+	display: block;
+	margin: 10px auto;
+	width: 48px;
+}
+
+.footer {
+	background: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+	height: 30px;
+	width: 100%;
+	color: #ff0000;
+	font-weight: bold;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.footer .fab:hover,
+.footer .fa:hover {
+	opacity: 0.7;
+}
+
+.footer .fa,
+.footer .fab {
+	color: white;
+}
+
+/* Main Styles */
+
+input {
+	width: 100%;
+	height: 50px;
+	padding: 0 0 0 50px;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+input:focus {
+	outline: none;
+}
+
+.input-group {
+	margin: 20px auto;
+	position: relative;
+	display: table;
+}
+
+.input-group button {
+	margin-top: 5px;
+}
+
+.input-group .fa,
+.input-group .fab {
+	position: absolute;
+	margin: 20px;
+	color: #000000;
+}
+
+.warning i.fa {
+	color: red;
+}
+
+.warning input {
+	border: 1px solid red;
+}
+
+.warning input:-moz-placeholder {
+	color: red;
+}
+
+.warning input::-moz-placeholder {
+	color: red;
+}
+
+.warning input:-ms-input-placeholder {
+	color: red;
+}
+
+.warning input::-webkit-input-placeholder {
+	color: red;
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 4px;
+	padding: 0 16px;
+	min-width: 64px;
+	height: 36px;
+	vertical-align: middle;
+	text-align: center;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+	background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+	-webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: -webkit-box-shadow 0.2s;
+	transition: -webkit-box-shadow 0.2s;
+	-o-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+button::-moz-focus-inner {
+	border: none;
+}
+
+button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+	opacity: 0;
+	-webkit-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+button::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	padding: 50%;
+	width: 32px; /* Safari */
+	height: 32px; /* Safari */
+	background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	-ms-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+	-webkit-transition: opacity 1s, -webkit-transform 0.5s;
+	transition: opacity 1s, -webkit-transform 0.5s;
+	-o-transition: opacity 1s, transform 0.5s;
+	transition: opacity 1s, transform 0.5s;
+	transition: opacity 1s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+button:hover::before {
+	opacity: 0.08;
+}
+
+button:focus::before {
+	opacity: 0.24;
+}
+
+button:hover:focus::before {
+	opacity: 0.3;
+}
+
+button:active::after {
+	opacity: 0.32;
+	-webkit-transform: translate(-50%, -50%) scale(0);
+	-ms-transform: translate(-50%, -50%) scale(0);
+	transform: translate(-50%, -50%) scale(0);
+	-webkit-transition: -webkit-transform 0s;
+	transition: -webkit-transform 0s;
+	-o-transition: transform 0s;
+	transition: transform 0s;
+	transition: transform 0s, -webkit-transform 0s;
+}
+
+button:disabled::before {
+	opacity: 0;
+}
+
+button:disabled::after {
+	opacity: 0;
+}
+
+/* Donations Styles */
+
+.input-group-copy {
+	margin: 0px auto;
+	position: relative;
+	display: table;
+}
+
+.input-group-copy label {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-bottom: 0;
+	border-radius: 100%;
+	background: #ffffff;
+	border: 1px solid transparent;
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	font-weight: normal;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	text-align: center;
+}
+
+.input-group-copy label:hover {
+	background: #f1f1f1;
+	border-color: #d6d6d6;
+}
+
+.input-group-copy label:after {
+	position: absolute;
+	display: block;
+	right: 0;
+	bottom: 5.2px;
+	left: 0;
+	margin: auto;
+
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight: 400 !important;
+	content: "\f0c5" !important;
+	color: #757575;
+}
+
+/* Margins fix */
+
+.btnMargin {
+	margin-top: 50px;
+}
+
+.data {
+	margin-top: 10px;
+}
