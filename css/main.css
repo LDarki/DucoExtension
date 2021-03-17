@@ -320,7 +320,7 @@ button:disabled::after {
 /* Margins fix */
 
 .btnMargin {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .data {

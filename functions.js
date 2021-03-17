@@ -22,6 +22,20 @@ const getJSON = (url, qs_params = "") => {
   });
 }
 
+const calculateHashrate = (hashes) => {
+  hashes = parseFloat(hashes);
+  let hashrate = hashes.toFixed(2) + " H/s";
+
+  if (hashes / 1000 > 0.5) hashrate = (hashes / 1000).toFixed(2) + " kH/s";
+  if (hashes / 1000000 > 0.5)
+    hashrate = (hashes / 1000000).toFixed(2) + " MH/s";
+  if (hashes / 1000000000 > 0.5)
+    hashrate = (hashes / 1000000000).toFixed(2) + " GH/s";
+
+  return hashrate;
+};
+
+
 const getRandomColor = () => {
   let letters = 'BCDEF'.split('');
   let color = '#';

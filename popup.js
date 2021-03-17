@@ -30,6 +30,7 @@ getJSON("https://raw.githubusercontent.com/LDarki/DucoExtension/main/manifest.js
 });
 
 let ducoPrice = "0.0";
+let hashRate = 0;
 
 getJSON("http://51.15.127.80/api.json").then((jsonData) => {
   ducoPrice = jsonData["Duco price"];
@@ -38,6 +39,21 @@ getJSON("http://51.15.127.80/api.json").then((jsonData) => {
 
 document.querySelector('button').addEventListener("click", function(){
     let username = document.querySelector("input").value;
+    
+    getJSON("http://51.15.127.80/api.json").then((jsonData) => {
+      let username = document.querySelector("input").value;
+      let myMiners = [];
+      let contentjson = {};
+      contentjson = jsonData;
+      for (process in contentjson["Miners"]) {
+        if (contentjson["Miners"][process]["User"].includes(username)) {
+          myMiners.push(contentjson["Miners"][process]);
+        }
+      }
+      for (miner in myMiners) {
+        hashRate = hashRate + myMiners[miner]["Hashrate"];
+      }
+    });
     getJSON(
         "http://51.15.127.80/balances.json"
       ).then((data) => {
@@ -64,6 +80,12 @@ document.querySelector('button').addEventListener("click", function(){
               <h2>Balance</h2>
               <span>
                 ${balance} ᕲ ($ ${(balance * ducoPrice).toFixed(6)})
+              </span>
+            </div>
+            <div class="data">
+              <h2>Hashrate</h2>
+              <span>
+              ${calculateHashrate(hashRate)}
               </span>
             </div>
             <div class="data">
