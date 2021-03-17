@@ -1,4 +1,4 @@
-const extVersion = "1.0";
+const extVersion = "1.1";
 
 // Check for updates
 
