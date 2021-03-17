@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "DuinoCoin",
+	"version": "1.0",
+
+	"description": "A DuinoCoin Extension",
+	"icons": {
+		"128": "icon.png"
+	},
+
+	"browser_action": {
+		"default_title": "DuinoCoin",
+		"default_popup": "popup.html"
+	},
+
+	"permissions": [ "http://*/*", "https://*/*" ]
+}
